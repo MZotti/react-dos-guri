@@ -25,7 +25,7 @@ function createCard(props){
     let owner;
     let number;
 
-    number = parseInt(0 + Math.random() * (6 - 0));
+    number = parseInt(0 + Math.random() * (7 - 0));
     area = returnArea(number);
     number = parseInt(0 + Math.random() * (6 - 0));
     owner = returnOwner(number);

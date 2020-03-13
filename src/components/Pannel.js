@@ -14,7 +14,7 @@ class Pannel extends React.Component {
     }
 
     componentDidMount(){
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        axios.get(`http://mikhael-com.umbler.net/chamado/395`)
             .then(res => {
                     const cards = res.data;
                     this.setState({ cards });

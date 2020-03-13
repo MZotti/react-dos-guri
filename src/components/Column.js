@@ -7,7 +7,7 @@ class Column extends React.Component {
     return (
         <div class="col col-md-2">
             <div class="column">
-                <h3>{this.props.status}</h3>
+                <h3 class="awaiting">{this.props.status}</h3>
                 <Card 
                     title="0666 - Chamado chato pra caralho"
                     requester="Andre Silva"

@@ -2,7 +2,27 @@ import React from 'react';
 
 import Column from './Column';
 
+import axios from 'axios'
+
 class Pannel extends React.Component {
+
+    constructor(){
+        super();
+        this.state = {
+            cards : []
+        };
+    }
+
+    componentDidMount(){
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
+            .then(res => {
+                    const cards = res.data;
+                    this.setState({ cards });
+                    console.log(this.state);
+                })
+
+        //console.log(this.state);
+    }
 
     render() {
         return (

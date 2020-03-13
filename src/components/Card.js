@@ -6,15 +6,13 @@ class Card extends React.Component {
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
-
+        
         this.state = {
             status: 0
         };
     }
 
     handleClick() {
-        console.log(this.props);
-        console.log(this.state);
         this.setState({ status: (this.state.status + 1) })
         if(this.state.status === 5)
             this.setState({ status: 0 })
@@ -23,10 +21,11 @@ class Card extends React.Component {
 
     render() {
         return (
-            <div className="ticket-card copies" onClick={this.handleClick}>
+            <div className={`ticket-card ${this.props.department}`} onClick={this.handleClick}>
                 <span className="title">{this.props.id} - {this.props.title}</span>
                 <span className="text">Deman.: {this.props.requester}</span>
                 <span className="text">Resp.: {this.props.owner}</span>
+                <span className="sla">10</span>
             </div>
         )
     }

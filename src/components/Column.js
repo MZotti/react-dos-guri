@@ -23,7 +23,7 @@ function createCard(props){
         return (
         <Card 
             id="0666"
-            title="Chamado chato pra caralho"
+            title="Nome do chamado"
             requester="Andre Silva"
             owner="Marcos Zotti"
             department="copies"

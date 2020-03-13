@@ -11,17 +11,23 @@ class Pannel extends React.Component {
         this.state = {
             cards : []
         };
+        this.cards = {
+            awainting : [],
+            development : [],
+            testing : [],
+            validation : [],
+            deployment : [],
+            done : []
+        }
     }
 
     componentDidMount(){
-        axios.get(`http://mikhael-com.umbler.net/chamado/395`)
+        axios.get(`https://homologa.doc9.com.br/apiti/chamados-sprint.php`)
             .then(res => {
                     const cards = res.data;
                     this.setState({ cards });
-                    console.log(this.state);
+                    cardsBuild(this.state.cards);
                 })
-
-        //console.log(this.state);
     }
 
     render() {
@@ -36,6 +42,15 @@ class Pannel extends React.Component {
             </div>
         )
     }
+}
+
+function cardsBuild(tickets){
+    tickets.forEach(ticket => {
+        console.log(tickets);
+        switch(tickets){
+
+        }
+    });
 }
 
 export default Pannel;

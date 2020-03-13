@@ -1,14 +1,31 @@
 $font : 'Arial';
 
-$ticketAwaiting : #234761;
-$ticketDevelopment : #614023;
-$ticketTesting : #236133;
-$tickeValidation : #224eb1;
+$ticketAwaiting : #614023;
+$ticketDevelopment : #234761;
+$ticketTesting : #bda814;
+$tickeValidation : #8a2727;
 $ticketDeployment : #5e4c8a;
-$ticketDone : #bda814;
+$ticketDone : #236133;
+
+$areaAtendimento : #65407b;
+$areaAudiences : #4f5bb5;
+$areaAudit : #3c9da7;
+$areaSelling : #9c7835;
+$areaCopies : #224fb3;
+$areaDirectorship : #b93c3c;
+$areaFinancial : #3d6f41;
+$areaHumanResources : #91ab5f;
+$areaRelationship : #c5be6a;
+$areaDiligencies : #6b7f9c;
+$areaTechnology : #005ee6;
+$areaMarketing : #678069;
+$areaCommunity : #966262;
+$areaProducts : #5d5d5d;
+$areaProjects : #8e0f96;
 
 body {
   margin: 0;
+  padding: 1em;
   font-family: $font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,40 +41,49 @@ code {
   padding: 10px;
   border-radius: 20px;
   text-align: center;
+  min-height: 200px;
 
   h3{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1em;
     color: #FFF;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 2px;
   }
 
-  .card{
+  .ticket-card{
+    width: 100%;
     border: 1.2px solid #000;
+    color: #FFF;
     border-radius: 20px;
     padding: 10px;
     text-align: left;
+    margin-bottom: 10px;
 
     .title{
-      font-size: 1em;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      display: block;
     }
 
     .text{
       font-size: 1em;
+      display: block;
     }
 
   }
 
 }
+
+//TICKET STATUS//
 
 .awaiting{
   background: $ticketAwaiting;
 }
 
 .development{
-  background: $ticketDeployment;
+  background: $ticketDevelopment;
 }
 
 .testing{
@@ -68,10 +94,74 @@ code {
   background: $tickeValidation;
 }
 
-.deploymnet{
+.deployment{
   background: $ticketDeployment;
 }
 
 .done{
   background: $ticketDone;
 }
+
+//CARD REQUESTER AREA//
+
+.atendimento{
+  background: $areaAtendimento;
+}
+
+.audiences{
+  background: $areaAudiences;
+}
+
+.audit{
+  background: $areaAudit;
+}
+
+.selling{
+  background: $areaSelling;
+}
+
+.copies{
+  background: $areaCopies;
+}
+
+.directorship{
+  background: $areaDirectorship;
+}
+
+.financial{
+  background: $areaFinancial;
+}
+
+.humanResources{
+  background: $areaHumanResources;
+}
+
+.relationship{
+  background: $areaRelationship;
+}
+
+.diligencies{
+  background: $areaDiligencies;
+}
+
+.technology{
+  background: $areaTechnology;
+}
+
+.marketing{
+  background: $areaMarketing;
+}
+
+.community{
+  background: $areaCommunity;
+}
+
+.products{
+  background: $areaProducts;
+}
+
+.projects{
+  background: $areaProjects;
+}
+
+//

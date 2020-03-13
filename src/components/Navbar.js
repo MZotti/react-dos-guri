@@ -11,10 +11,10 @@ class Navbar extends React.Component {
                     <li className="nav-item active">
                         <a className="nav-link" href="#">Sprint</a>
                     </li>
-                    <li className="nav-item active">
+                    <li className="nav-item">
                         <a className="nav-link" href="#">Sustentação</a>
                     </li>
-                    <li className="nav-item active">
+                    <li className="nav-item">
                         <a className="nav-link" href="#">BI</a>
                     </li>
                 </ul>

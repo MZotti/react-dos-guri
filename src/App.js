@@ -1,24 +1,17 @@
 import React from 'react';
+import Column from './components/Column'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="row">
+      <Column status="Na fila"/>
+      <Column status="Em desenvolvimento"/>
+      <Column status="Em Teste"/>
+      <Column status="Em Homologação"/>
+      <Column status="Aguarda Publicação"/>
+      <Column status="Pronto"/>
     </div>
   );
 }

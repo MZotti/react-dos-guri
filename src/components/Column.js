@@ -4,14 +4,25 @@ import Card from './Card';
 
 class Column extends React.Component {
 
+    constructor(props){
+        super(props);
+        console.log(this.props);
+    }
+
     render() {
         return (
             <div className="col-lg-2 col-md-6 col-sm-12">
                 <div className="column">
                     <h3 className={this.props.status}>{this.props.statusName}</h3>
-                    {createCard(this.props)}
-                    {createCard(this.props)}
-                    {createCard(this.props)}          
+                    { this.props.cards ? this.props.cards.map(card => 
+                        <Card 
+                        id={card.id}
+                        title={card.titulo}
+                        requester={card.usuario_abertura}
+                        owner={card.usuario_dono}
+                        department={returnArea(card.setor)}
+                    />
+                        ) : ''}
                 </div>
             </div>
         )
@@ -19,83 +30,59 @@ class Column extends React.Component {
   
 }
 
-function createCard(props){
+function createCard(data){
 
-    let area;
+   /* let area;
     let owner;
     let number;
 
     number = parseInt(0 + Math.random() * (7 - 0));
     area = returnArea(number);
     number = parseInt(0 + Math.random() * (6 - 0));
-    owner = returnOwner(number);
-
-    if(props.id === "0"){
+    owner = returnOwner(number);*/
+    if(data)
         return (
             <Card 
-                id="0666"
-                title="Nome do chamado"
-                requester={area.requester}
-                owner={owner}
-                department={area.department}
+                id={data.id}
+                title={data.titulo}
+                requester={data.usuario_abertura}
+                owner={data.usuario_dono}
+                department={returnArea(data.setor)}
             />
         )
-    }
 }
 
 function returnArea(area){
     switch(area){
         case 0:
-            return {
-                department : 'copies',
-                requester : 'Andre Silva'
-            };
+        case 7:
+            return 'copies';
             break;
         case 1:
-            return {
-                department : 'audiences',
-                requester : 'Marucia Oliveira'
-            };
+            return 'audiences';
             break;
         case 2:
-            return {
-                department : 'relationship',
-                requester : 'Guilherme Goulart'
-            };
+        case 10:
+            return 'relationship';
             break;
         case 3:
-            return {
-                department : 'marketing',
-                requester : 'Romulo Neto'
-            };
+            return 'marketing';
             break;
         case 4:
-            return {
-                department : 'technology',
-                requester : 'Tiago Fraga'
-            };
+            return 'technology';
             break;
         case 5:
-            return {
-                department : 'community',
-                requester : 'Jorge Salati'
-            };
+            return 'community';
             break;
         case 6:
-            return {
-                department : 'directorship',
-                requester : 'Klaus Riffel'
-            };
+            return 'directorship';
             break;
         default:
-            return {
-                department : 'directorship',
-                requester : 'Klaus Riffel'
-            };
+            return 'directorship';
             break;
     }
 }
-
+/*
 function returnOwner(owner){
     switch(owner){
         case 0:
@@ -120,6 +107,6 @@ function returnOwner(owner){
             return '0';
             break;
     }
-}
+}*/
 
 export default Column;

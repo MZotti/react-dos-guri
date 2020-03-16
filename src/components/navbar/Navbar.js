@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPause } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,18 +17,22 @@ class Navbar extends React.Component {
             items:[
             { 
                 "name": "Sprint",
+                "link": "/sprint",
                 "actived": true         
             },
             { 
                 "name": "Sustentação", 
+                "link": "/sustentacao",
                 "actived": false       
             },
             { 
                 "name": "BI", 
+                "link": "/bi",
                 "actived": false        
             },
             { 
                 "name": "Infraestrutura", 
+                "link": "/infraestrutura",
                 "actived": false     
             }]
         }
@@ -38,7 +44,7 @@ class Navbar extends React.Component {
                 <ul className="navbar-nav mr-auto">
                     { this.state.items.map(item => 
                         <li className={`nav-item ${ item.actived == true ? `active` : `` } `}>
-                            <a className="nav-link" href="#">{item.name}</a>
+                            <Link className="nav-link" to={item.link}>{item.name}</Link>
                         </li>
                     )}
                     <li className="nav-item no-border">

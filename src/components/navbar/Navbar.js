@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LoadingBar from './LoadingBar';
+import NavItem from './NavItem';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faPause } from '@fortawesome/free-solid-svg-icons'
 
 import '../../css/navbar.scss';
@@ -18,22 +20,22 @@ class Navbar extends React.Component {
             { 
                 "name": "Sprint",
                 "link": "/sprint",
-                "actived": false         
+                "active": true         
             },
             { 
                 "name": "Sustentação", 
                 "link": "/sustentacao",
-                "actived": false       
+                "active": false       
             },
             { 
                 "name": "BI", 
                 "link": "/bi",
-                "actived": false        
+                "active": false        
             },
             { 
                 "name": "Infraestrutura", 
                 "link": "/infraestrutura",
-                "actived": false     
+                "active": false     
             }]
         }
     }
@@ -41,11 +43,14 @@ class Navbar extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg">
+                <LoadingBar />
                 <ul className="navbar-nav mr-auto">
                     { this.state.items.map(item => 
-                        <li className={`nav-item ${ item.actived == true ? `active` : `` } `}>
-                            <Link className="nav-link" to={item.link}>{item.name}</Link>
-                        </li>
+                        <NavItem 
+                            name={ item.name }
+                            link={ item.link }
+                            active={ item.active }
+                        />
                     )}
                     <li className="nav-item no-border">
                         <span className="nav-link">{}</span>

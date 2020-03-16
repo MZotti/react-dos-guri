@@ -16,13 +16,13 @@ class Column extends React.Component {
                     <h3 className={this.props.status}>{this.props.statusName}</h3>
                     { this.props.cards ? this.props.cards.map(card => 
                         <Card 
-                        id={card.id}
-                        title={card.titulo}
-                        requester={card.usuario_abertura}
-                        owner={card.usuario_dono}
-                        department={returnArea(card.setor)}
-                        sla={card.previsao_hora ? card.previsao_hora : card.datahora_previsao}
-                    />
+                            id={card.id}
+                            title={card.titulo}
+                            requester={card.usuario_abertura}
+                            owner={card.usuario_dono}
+                            department={returnArea(card.setor)}
+                            sla={card.previsao_hora ? card.previsao_hora : card.datahora_previsao}
+                        />
                         ) : ''}
                 </div>
             </div>

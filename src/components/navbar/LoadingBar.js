@@ -4,7 +4,10 @@ class LoadingBar extends React.Component {
 
     constructor(){
         super();
-        
+
+        this.state = {
+            width : 0
+        }
     }
 
     render() {

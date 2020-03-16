@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import LoadingBar from './components/LoadingBar';
 import Navbar from './components/navbar/Navbar';
 import Pannel from './components/pannel/Pannel';
 import Sustentacao from './components/pannel/Sustentacao';
@@ -13,10 +14,11 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <LoadingBar />
         <Navbar />
         <Switch>
             <Route path="/" exact={true} component={Pannel} />
-            <Route path="/sprint" exact={true} component={Pannel} />
+            <Route path="/sprint" component={Pannel} />
             <Route path="/sustentacao" component={Sustentacao} />
         </Switch>
       </BrowserRouter>

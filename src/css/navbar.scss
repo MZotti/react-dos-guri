@@ -16,7 +16,7 @@
         color: #000;
     }
 
-    /*.progress {
+    .progress {
         display: block;
         height: 100%;
         position: relative;
@@ -24,15 +24,27 @@
         width: 0%;
     }
 
-    .loading-element {
+    .nav-item .loading-element::before {
+        background-color: #000;
         animation: progressBar 30s ease-in-out;
         animation-fill-mode:both; 
     }
+}
+
+.loading-bar{
+	position: fixed;
+    z-index: 1;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    animation: progressBar 30s ease-in-out;
+    animation-fill-mode:both; 
+}
     
-    @keyframes progressBar {
-      0% { width: 0; }
-      100% { width: 100%; }
-    }*/
+@keyframes progressBar {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
 .active{

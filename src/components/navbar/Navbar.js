@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPause } from '@fortawesome/free-solid-svg-icons'
+//import { faPause } from '@fortawesome/free-solid-svg-icons'
 
 import '../../css/navbar.scss';
 
-const pause = <FontAwesomeIcon icon={faPause} />
+//const pause = <FontAwesomeIcon icon={faPause} />
 
 class Navbar extends React.Component {
 
@@ -48,7 +48,7 @@ class Navbar extends React.Component {
                         </li>
                     )}
                     <li className="nav-item no-border">
-                        <span className="nav-link">{pause}</span>
+                        <span className="nav-link">{}</span>
                     </li>
                 </ul>
             </nav>

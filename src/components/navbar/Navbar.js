@@ -18,7 +18,7 @@ class Navbar extends React.Component {
             { 
                 "name": "Sprint",
                 "link": "/sprint",
-                "actived": true         
+                "actived": false         
             },
             { 
                 "name": "Sustentação", 

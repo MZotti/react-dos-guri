@@ -7,7 +7,7 @@ $tickeValidation : #8a2727;
 $ticketDeployment : #5e4c8a;
 $ticketDone : #236133;
 
-$areaAtendimento : #65407b;
+$areaRelationship : #65407b;
 $areaAudiences : #4f5bb5;
 $areaAudit : #3c9da7;
 $areaSelling : #9c7835;
@@ -15,7 +15,6 @@ $areaCopies : #224fb3;
 $areaDirectorship : #b93c3c;
 $areaFinancial : #3d6f41;
 $areaHumanResources : #91ab5f;
-$areaRelationship : #8e872a;
 $areaDiligencies : #6b7f9c;
 $areaTechnology : #005ee6;
 $areaMarketing : #678069;
@@ -105,10 +104,6 @@ code {
 
 //CARD REQUESTER AREA//
 
-.atendimento{
-  background: $areaAtendimento;
-}
-
 .audiences{
   background: $areaAudiences;
 }
@@ -133,7 +128,7 @@ code {
   background: $areaFinancial;
 }
 
-.humanResources{
+.human-resources{
   background: $areaHumanResources;
 }
 

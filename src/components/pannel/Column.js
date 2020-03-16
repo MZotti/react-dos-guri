@@ -29,17 +29,17 @@ class Column extends React.Component {
     }
   
 }
-
+/*
 function createCard(data){
 
-   /* let area;
+    let area;
     let owner;
     let number;
 
     number = parseInt(0 + Math.random() * (7 - 0));
     area = returnArea(number);
     number = parseInt(0 + Math.random() * (6 - 0));
-    owner = returnOwner(number);*/
+    owner = returnOwner(number);
     if(data)
         return (
             <Card 
@@ -50,7 +50,7 @@ function createCard(data){
                 department={returnArea(data.setor)}
             />
         )
-}
+}*/
 
 function returnArea(area){
     switch(area){

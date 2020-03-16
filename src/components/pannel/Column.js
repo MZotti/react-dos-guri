@@ -55,30 +55,49 @@ function createCard(data){
 function returnArea(area){
     switch(area){
         case 0:
-        case 7:
-            return 'copies';
+        case 10:
+            return 'relationship';
             break;
         case 1:
             return 'audiences';
             break;
         case 2:
-        case 10:
-            return 'relationship';
+        case 4:
+        case 7:
+            return 'copies';
             break;
         case 3:
-            return 'marketing';
-            break;
-        case 4:
-            return 'technology';
+            return 'selling';
             break;
         case 5:
-            return 'community';
+            return 'directorship';
             break;
         case 6:
-            return 'directorship';
+            return 'financial';
+            break;
+        case 9:
+            return 'human-resources';
+            break;
+        case 11:
+            return 'diligencies';
+            break;
+        case 12:
+            return 'technology';
+            break;
+        case 13:
+            return 'marketing';
+            break;
+        case 14:
+            return 'community';
+            break;
+        case 15:
+            return 'products';
+            break;
+        case 16:
+            return 'projects';
             break;
         default:
-            return 'directorship';
+            return 'default';
             break;
     }
 }

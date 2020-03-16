@@ -11,7 +11,7 @@ class Column extends React.Component {
 
     render() {
         return (
-            <div className="col-lg-2 col-md-6 col-sm-12">
+            <div className="col-lg-2 col-md-6 col-sm-12 col-less-padding">
                 <div className="column">
                     <h3 className={this.props.status}>{this.props.statusName}</h3>
                     { this.props.cards ? this.props.cards.map(card => 
@@ -21,7 +21,7 @@ class Column extends React.Component {
                         requester={card.usuario_abertura}
                         owner={card.usuario_dono}
                         department={returnArea(card.setor)}
-                        sla={card.previsao_hora}
+                        sla={card.previsao_hora ? card.previsao_hora : card.datahora_previsao}
                     />
                         ) : ''}
                 </div>

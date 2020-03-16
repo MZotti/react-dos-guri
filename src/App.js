@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Navbar from './components/Navbar';
-import Pannel from './components/Pannel';
+import Navbar from './components/navbar/Navbar';
+import Pannel from './components/pannel/Pannel';
+import Websocket from './components/Websocket';
 
 import './App.css';
 

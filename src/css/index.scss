@@ -7,20 +7,20 @@ $tickeValidation : #8a2727;
 $ticketDeployment : #5e4c8a;
 $ticketDone : #236133;
 
-$areaRelationship : #65407b;
-$areaAudiences : #4f5bb5;
+$areaRelationship : #453479;
+$areaAudiences : #8B3168;
 $areaAudit : #3c9da7;
-$areaSelling : #9c7835;
-$areaCopies : #224fb3;
-$areaDirectorship : #b93c3c;
-$areaFinancial : #3d6f41;
-$areaHumanResources : #91ab5f;
+$areaSelling : #B17F3F;
+$areaCopies : #2D5472;
+$areaDirectorship : #B13F3F;
+$areaFinancial : #31893B;
+$areaHumanResources : #96aa3c;
 $areaDiligencies : #6b7f9c;
 $areaTechnology : #005ee6;
 $areaMarketing : #678069;
 $areaCommunity : #966262;
 $areaProducts : #5d5d5d;
-$areaProjects : #8e0f96;
+$areaProjects : #712973;
 
 body {
   margin: 0;
@@ -158,6 +158,10 @@ code {
 
 .projects{
   background: $areaProjects;
+}
+
+.default{
+  background: #FFF;
 }
 
 //

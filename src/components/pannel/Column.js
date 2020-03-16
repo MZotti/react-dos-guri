@@ -21,6 +21,7 @@ class Column extends React.Component {
                         requester={card.usuario_abertura}
                         owner={card.usuario_dono}
                         department={returnArea(card.setor)}
+                        sla={card.previsao_hora}
                     />
                         ) : ''}
                 </div>

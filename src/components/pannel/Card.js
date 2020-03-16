@@ -25,6 +25,7 @@ class Card extends React.Component {
                 <span className="title">{this.props.id} - {this.props.title}</span>
                 <span className="text">Deman.: {this.props.requester}</span>
                 <span className="text">Resp.: {this.props.owner}</span>
+                <span className="text">SLA: {this.props.sla}</span>
             </div>
         )
     }

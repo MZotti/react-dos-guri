@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 class NavItem extends React.Component {
 
@@ -14,11 +14,18 @@ class NavItem extends React.Component {
         }
     }
 
+    handleClick() {
+        this.setState({ active: true })
+    }
+
     render() {
         return (
-            <li className={`nav-item ${ this.state.active == true ? `active` : `` } `}>
+            /*<li className={`nav-item${ this.state.active == true ? ` active` : `` }`}>
                 <Link className="nav-link" to={this.state.link}>{this.state.name}</Link>
-            </li>
+            </li>*/
+            <NavLink className="nav-item" to={this.state.link}>
+                <span className="nav-link">{this.state.name}</span>
+            </NavLink>
         )
     }
 }

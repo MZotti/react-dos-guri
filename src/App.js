@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 import Navbar from './components/navbar/Navbar';
-import Pannel from './components/pannel/Pannel';
+import Sprint from './components/pannel/Sprint';
 import Sustentacao from './components/pannel/Sustentacao';
 import Websocket from './components/Websocket';
+
 
 
 import './App.css';
@@ -15,8 +17,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
-            <Route path="/" exact={true} component={Pannel} />
-            <Route path="/sprint" component={Pannel} />
+            <Route path="/" exact={true} component={Sprint} />
+            <Route path="/sprint" component={Sprint} />
             <Route path="/sustentacao" component={Sustentacao} />
         </Switch>
       </BrowserRouter>

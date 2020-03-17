@@ -2,56 +2,43 @@ import React from 'react';
 
 import Card from './Card';
 
+import SmoothRender from 'react-smooth-render';
+
 class Column extends React.Component {
 
     constructor(props){
         super(props);
-        console.log(this.props);
+        this.state =  {
+            hidden: false 
+        }
+    }
+
+    componentDidMount(){
+        const { hidden } = this.state
+        this.setState({ hidden: !hidden })
     }
 
     render() {
         return (
-            <div className="col-lg-2 col-md-6 col-sm-12 col-less-padding">
-                <div className="column">
-                    <h3 className={this.props.status}>{this.props.statusName}</h3>
-                    { this.props.cards ? this.props.cards.map(card => 
-                        <Card 
-                            id={card.id}
-                            title={card.titulo}
-                            requester={card.usuario_abertura}
-                            owner={card.usuario_dono}
-                            department={returnArea(card.setor)}
-                            sla={card.previsao_hora ? card.previsao_hora : card.datahora_previsao}
-                        />
-                        ) : ''}
+                <div className="col-lg-2 col-md-6 col-sm-12 col-less-padding">
+                    <div className="column">
+                        <h3 className={this.props.status}>{this.props.statusName}</h3>
+                        { this.props.cards ? this.props.cards.map(card => 
+                            <Card 
+                                id={card.id}
+                                title={card.titulo}
+                                requester={card.usuario_abertura}
+                                owner={card.usuario_dono}
+                                department={returnArea(card.setor)}
+                                sla={card.previsao_hora ? card.previsao_hora : card.datahora_previsao}
+                            />
+                            ) : ''}
+                    </div>
                 </div>
-            </div>
         )
     }
   
 }
-/*
-function createCard(data){
-
-    let area;
-    let owner;
-    let number;
-
-    number = parseInt(0 + Math.random() * (7 - 0));
-    area = returnArea(number);
-    number = parseInt(0 + Math.random() * (6 - 0));
-    owner = returnOwner(number);
-    if(data)
-        return (
-            <Card 
-                id={data.id}
-                title={data.titulo}
-                requester={data.usuario_abertura}
-                owner={data.usuario_dono}
-                department={returnArea(data.setor)}
-            />
-        )
-}*/
 
 function returnArea(area){
     switch(area){
@@ -102,31 +89,5 @@ function returnArea(area){
             break;
     }
 }
-/*
-function returnOwner(owner){
-    switch(owner){
-        case 0:
-            return 'Rafael Lopes';
-            break;
-        case 1:
-            return 'Fernando Franco';
-            break;
-        case 2:
-            return 'Lucas Pacheco';
-            break;
-        case 3:
-            return 'Mikhael Bittelo';
-            break;
-        case 4:
-            return 'Marcos Zotti';
-            break;
-        case 5:
-            return 'Matheus Pires';
-            break;
-        default:
-            return '0';
-            break;
-    }
-}*/
 
 export default Column;

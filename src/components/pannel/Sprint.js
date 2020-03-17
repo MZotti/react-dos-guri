@@ -5,7 +5,7 @@ import Column from './Column';
 
 import axios from 'axios'
 
-class Sustentacao extends React.Component {
+class Sprint extends React.Component {
 
     constructor(){
         super();
@@ -17,13 +17,13 @@ class Sustentacao extends React.Component {
     }
 
     componentDidMount(){
-        axios.get(`https://sistema.doc9.com.br/apiti/chamados-sustentacao.php`)
+        axios.get(`https://sistema.doc9.com.br/apiti/chamados-sprint.php`)
             .then(res => {
                     const cards = res.data;
                     this.setState({ cards });
                     this.setState({isLoading: false})    
                     console.log(this.state);
-                })       
+                })   
     }
 
     render() {
@@ -42,4 +42,4 @@ class Sustentacao extends React.Component {
     }
 }
 
-export default Sustentacao;
+export default Sprint;

@@ -4,19 +4,10 @@ class Card extends React.Component {
 
     constructor(props){
         super(props);
-
-        this.handleClick = this.handleClick.bind(this);
         
         this.state = {
             status: 0
         };
-    }
-
-    handleClick() {
-        this.setState({ status: (this.state.status + 1) })
-        if(this.state.status === 5)
-            this.setState({ status: 0 })
-
     }
 
     render() {

@@ -11,11 +11,8 @@
     padding: 4px 17px 4px 17px;
     margin-right: 15px;
     transition: background-color 0.3s;
-    cursor: pointer;
-
-    .nav-link{
-        color: #464646;
-    }
+    cursor: pointer;    
+    color: #464646;
 
     .progress {
         display: block;
@@ -39,6 +36,9 @@
     top: 0;
     left: 0;
     background-color: #000;
+}
+
+.loading-active{
     animation: progressBar 30s ease-in-out;
     animation-fill-mode:both; 
 }

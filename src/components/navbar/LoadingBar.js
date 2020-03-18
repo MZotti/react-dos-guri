@@ -6,13 +6,22 @@ class LoadingBar extends React.Component {
         super();
 
         this.state = {
-            width : 0
+            loading : true
         }
+    }
+    componentDidMount() {
+        console.log(this.state);
+        let timer = null;
+        timer = setTimeout(
+            () => (
+                this.setState({loading: false}),
+                console.log(this.state)
+            ), 30000);
     }
 
     render() {
         return (
-            <div className="loading-bar">
+            <div className={`loading-bar ${this.state.loading ? `loading-active` : `` }`} >
             </div>
         )
     }
